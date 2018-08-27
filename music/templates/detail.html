@@ -1,0 +1,42 @@
+{% extends 'header.html' %}
+{% block content %}
+{%load static %}    
+
+</br>
+</br>
+<div class="container">
+    <div class="col-md-4">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">{{ album.album_title }}</h3>
+            </div>
+        
+             <div class="panel-body" style="background-color: #fdc00d">
+                
+                <div>
+                 {% csrf_token %}
+                    
+                <div>
+                   <img src="/{{ album.album_logo }}" height="15%" alt="">
+                
+                </div>
+                   
+                        {% for song in album.song_set.all %}
+                    
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="choice" id="choice{{ forloop.counter }}" value="{{ song.id }}"/> {{ song.song_title }}
+                            </label>
+                        </div>
+                        {% endfor %}
+                
+            </div>
+            <div class="panel-footer text-center">
+                  <a href="{% url 'music:addsong' %}"><span class="glyphicon glyphicon-plus-sign" data-toggle="modal" >&nbspAdd Song</span></a>
+                
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

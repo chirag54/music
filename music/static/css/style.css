@@ -1,0 +1,24 @@
+
+footer {
+    padding-top: 40px;
+    bottom: 40px;
+    background-color: #1E1F23;
+    color: #fff;
+    position: relative;
+}
+a.footer-socialicon {
+    color: #FDC00D;
+} 
+
+.container-top {
+    width: 100%;
+    display: inline-block;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: url(../static/top.jpg) no-repeat;
+    background-size: cover;
+    color: #FDC00D;
+}
+img { 
+    display: inline-block;
+}
