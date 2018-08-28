@@ -22,3 +22,8 @@ a.footer-socialicon {
 img { 
     display: inline-block;
 }
+
+#logout
+{
+    display: none;
+}
