@@ -1,4 +1,5 @@
 {% extends 'header.html' %}
+
 {% block content %}
 
 <div class="container" id="myModal" >
@@ -13,7 +14,7 @@
     
             {% for field in form %}
              <div class="form-group">
-                  <label class="control-label col-sm-2" for="artist">{{ field.label }}</label>
+                  <label class="control-label col-sm-2" for="artist">{{ field.label_tag }}</label>
                   <div class="form col-sm-8">
                     {{ field }}
                   </div>
